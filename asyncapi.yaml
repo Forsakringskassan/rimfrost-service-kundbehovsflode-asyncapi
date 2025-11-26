@@ -1,0 +1,33 @@
+asyncapi: 3.0.0
+info:
+  title: Kundbehovsflöde Async API
+  version: 1.0.0
+  description: Kundbehovsflöde Async API för att skicka meddelande när ett flöde är klart
+
+channels:
+  kundbehovsflode.done:
+    messages:
+      KundbehovsflodeDoneMessage:
+        $ref: '#/components/messages/KundbehovsflodeDoneMessage'
+
+operations:
+  KundbehovsflodeDoneMessage:
+    action: receive
+    channel:
+      $ref: '#/channels/kundbehovsflode.done'
+    messages:
+      - $ref: '#/channels/kundbehovsflode.done/messages/kundbehovsflodeDoneMessage'
+    summary: Konsumerar event när ett kundbehovsflöde är klart
+components:
+  messages:
+    KundbehovsflodeDoneMessage:
+      payload:
+        title: KundbehovsflodeDoneMessage
+        type: object
+        required:
+          - kundbehovsflodeId
+        properties:
+          kundbehovsflodeId:
+            type: string
+            format: uuid
+            description: Unikt ID som identifierar kundbehovsflödet
