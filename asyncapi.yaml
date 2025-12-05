@@ -16,7 +16,7 @@ operations:
     channel:
       $ref: '#/channels/kundbehovsflode.done'
     messages:
-      - $ref: '#/channels/kundbehovsflode.done/messages/kundbehovsflodeDoneMessage'
+      - $ref: '#/channels/kundbehovsflode.done/messages/KundbehovsflodeDoneMessage'
     summary: Konsumerar event när ett kundbehovsflöde är klart
 components:
   messages:
