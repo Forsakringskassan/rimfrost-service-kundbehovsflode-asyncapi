@@ -1,3 +1,9 @@
+## 0.1.1 (2025-12-05)
+
+### Bug Fixes
+
+-  typo kundbehovsflodeDoneMessage ([c41e0](https://github.com/Forsakringskassan/rimfrost-service-kundbehovsflode-asyncapi/commit/c41e0fd864a0a12) Ulf Slunga)  
+
 # rimfrost-service-kundbehovsflode-asyncapi changelog
 
 Changelog of rimfrost-service-kundbehovsflode-asyncapi.
